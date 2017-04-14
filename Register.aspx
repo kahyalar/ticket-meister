@@ -89,7 +89,7 @@
                 <td class="auto-style3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Button ID="btnClear" runat="server" style="margin-left: 0px" Text="Clear" />
 &nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="btnSubmit" runat="server" Text="Submit" Width="49px" />
+                    <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" Width="49px" />
                 </td>
                 <td>&nbsp;</td>
             </tr>
