@@ -54,7 +54,7 @@ public partial class Seat : System.Web.UI.Page
             selectedSeats = (List<string>)Session["selectedSeats"];
         }
 
-        lblSeatsSelected.Text = selectedSeatsAmount + " out of " + totalAmount + " Seats Selected";
+        lblSeatsSelected.Text = selectedSeatsAmount + " out of " + totalAmount + " Seat(s) Selected";
 
 
     }
@@ -82,9 +82,12 @@ public partial class Seat : System.Web.UI.Page
             selectedSeatsAmount++;
 
             if (selectedSeatsAmount == totalAmount)
+            {
                 AllSeatsEnabled(false);
+                btnContinue.Enabled = true;
+            }
 
-            lblSeatsSelected.Text = selectedSeatsAmount + " out of " + totalAmount + " Seats Selected";
+            lblSeatsSelected.Text = selectedSeatsAmount + " out of " + totalAmount + " Seat(s) Selected";
 
             Session["selectedSeatsAmount"] = selectedSeatsAmount;
             Session["selectedSeats"] = selectedSeats;
@@ -97,11 +100,14 @@ public partial class Seat : System.Web.UI.Page
             selectedSeats.Remove(seatName);
 
             if (selectedSeatsAmount == totalAmount)
+            {
                 AllSeatsEnabled(true);
+                btnContinue.Enabled = false;
+            }
 
             selectedSeatsAmount--;
 
-            lblSeatsSelected.Text = selectedSeatsAmount + " out of " + totalAmount + " Seats Selected";
+            lblSeatsSelected.Text = selectedSeatsAmount + " out of " + totalAmount + " Seat(s) Selected";
 
             Session["selectedSeatsAmount"] = selectedSeatsAmount;
             Session["selectedSeats"] = selectedSeats;

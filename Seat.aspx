@@ -128,7 +128,7 @@
                     &nbsp;</td>
                 <td class="auto-style2">
                     <asp:Button ID="btnBack" runat="server" CssClass="auto-style16" Text="Back" Width="120px" />
-                    <asp:Button ID="btnContinue" runat="server" CssClass="auto-style7" Text="Continue" Width="120px" />
+                    <asp:Button ID="btnContinue" runat="server" CssClass="auto-style7" Text="Continue" Width="120px" Enabled="False" />
                 </td>
             </tr>
         </table>
