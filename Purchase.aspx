@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Ticket.aspx.cs" Inherits="Ticket" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Purchase.aspx.cs" Inherits="Purchase" %>
 
 <!DOCTYPE html>
 
@@ -7,26 +7,19 @@
     <title></title>
     <style type="text/css">
         .auto-style1 {
-            width: 33%;
+            width: 36%;
         }
         .auto-style2 {
             margin-left: 0px;
         }
         .auto-style3 {
-            width: 151px;
+            width: 190px;
+        }
+        .auto-style4 {
+            margin-left: 10px;
         }
         .auto-style5 {
-            height: 30px;
-        }
-        .auto-style7 {
-            height: 148px;
-        }
-        @font-face{
-            font-family: 'BarcodeFont';  
-            src:url( "../barcode_font/BarcodeFont.ttf" );
-        }
-        .barcode-font{
-            font-family:'BarcodeFont';
+            margin-left: 100px;
         }
     </style>
 </head>
@@ -72,28 +65,42 @@
                 </td>
             </tr>
             <tr>
+                <td class="auto-style3">
+                    <asp:Label ID="lblName" runat="server"></asp:Label>
+                    <asp:Label ID="lblSurname" runat="server" CssClass="auto-style4"></asp:Label>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
                 <td colspan="2">
+                    <asp:Label ID="lblCreditCardNumber" runat="server"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <asp:Label ID="lblExpirationDate" runat="server"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <asp:Label ID="lblCVV" runat="server"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <asp:Label ID="Label4" runat="server" Text="TOTAL PRICE:" Width="120px"></asp:Label>
                     <asp:Label ID="lblTotalPrice" runat="server"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td colspan="2">
-                    <asp:Label ID="lblPNR" runat="server"></asp:Label>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style7" colspan="2">
-                    <asp:Label class="barcode-font" ID="lblBarcode" runat="server" Font-Size="150px"></asp:Label>
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style5" colspan="2">
-                    <asp:Label ID="Label4" runat="server" Text="Your e-Ticket is ready. Please do not forget it to bring.  Enjoy!"></asp:Label>
+                    <asp:Button ID="btnBack" runat="server" Text="Back" Width="120px" />
+                    <asp:Button ID="btnPurchase" runat="server" CssClass="auto-style5" Text="Purchase" Width="120px" />
                 </td>
             </tr>
         </table>
         <p>
-            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Welcome.aspx">TEST: Next Page</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Ticket.aspx">TEST: Next Page</asp:HyperLink>
         </p>
     </form>
 </body>

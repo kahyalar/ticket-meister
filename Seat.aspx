@@ -123,7 +123,8 @@
             </tr>
             <tr>
                 <td class="auto-style11">
-                    &nbsp;</td>
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Purchase.aspx">TEST: Next Page</asp:HyperLink>
+                </td>
                 <td class="auto-style18">
                     &nbsp;</td>
                 <td class="auto-style2">
@@ -1485,8 +1486,6 @@
                     &nbsp; N&nbsp;</td>
             </tr>
             </table>
-        <br />
-        <asp:Label ID="TEST" runat="server" Text="TEST"></asp:Label>
         <br />
         <br />
     </form>

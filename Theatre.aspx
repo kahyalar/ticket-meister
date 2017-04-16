@@ -67,6 +67,9 @@
                 </td>
             </tr>
         </table>
+        <p>
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Session.aspx">TEST: Next Page</asp:HyperLink>
+        </p>
     </form>
 </body>
 </html>

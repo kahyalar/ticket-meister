@@ -136,6 +136,9 @@
         </table>
     
     </div>
+        <p>
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Welcome.aspx">TEST: Next Page</asp:HyperLink>
+        </p>
     </form>
 </body>
 </html>

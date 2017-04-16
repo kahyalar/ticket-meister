@@ -8,6 +8,14 @@ using System.Web.UI.WebControls;
 
 public partial class Seat : System.Web.UI.Page
 {
+    // TEST BLOCK
+    string title = "The Baby Boss";
+    string date = "26/04/2017";
+    string city = "Istanbul";
+    string theatre = "Istinye Park Shopping Mall";
+    string session = "19:00";
+    // TEST BLOCK
+
     int totalAmount;
     int selectedSeatsAmount;
 
@@ -16,6 +24,14 @@ public partial class Seat : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
+        // TEST BLOCK
+        lblTitle.Text = title;
+        lblCity.Text = city;
+        lblTheatre.Text = theatre;
+        lblDate.Text = date;
+        lblSession.Text = session;
+        // TEST BLOCK
+
         if (Session["selectedButtonIDs"] == null)
         {
             selectedButtonIDs = new List<string>();
@@ -25,12 +41,6 @@ public partial class Seat : System.Web.UI.Page
         {
             selectedButtonIDs = (List<string>)Session["selectedButtonIDs"];
         }
-
-        lblTitle.Text = "The Baby Boss";
-        lblDate.Text = "23.04.2017";
-        lblCity.Text = "Istanbul";
-        lblTheatre.Text = "Istinye Park Shopping Mall";
-        lblSession.Text = "19:00";
 
         int adultAmount = 2;
         int studentAmount = 1;
@@ -113,7 +123,6 @@ public partial class Seat : System.Web.UI.Page
             Session["selectedSeats"] = selectedSeats;
             Session["selectedButtonIDs"] = selectedButtonIDs;
         }
-        TEST.Text = "TEST: " + selectedButtonIDs.Count;
     }
 
     void AllSeatsEnabled(bool enable)

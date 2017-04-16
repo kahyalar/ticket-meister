@@ -12,12 +12,4 @@ public partial class MainPage : System.Web.UI.Page
 
     }
 
-
-    protected void Button1_Click(object sender, EventArgs e)
-    {
-        for (int i = 1; i < 30; i++)
-        {
-            txtLinks.Text += ((ImageButton)FindControl("ImageButton" + i)).ImageUrl + "\n";
-        }
-    }
 }

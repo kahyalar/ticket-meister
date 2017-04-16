@@ -16,13 +16,6 @@
         .auto-style4 {
             height: 34px;
         }
-        .auto-style5 {
-            width: 438px;
-            height: 346px;
-        }
-        .auto-style6 {
-            height: 346px;
-        }
         .auto-style7 {
             width: 1147px;
             height: 115px;
@@ -40,8 +33,7 @@
             width: 171px;
         }
         .auto-style15 {
-            height: 346px;
-            width: 171px;
+            height: 33px;
         }
     </style>
 </head>
@@ -56,16 +48,12 @@
                 <td class="auto-style14">
                     <asp:HyperLink ID="HyperLink1" runat="server">My Tickets</asp:HyperLink>
                 </td>
-                <td class="auto-style4"></td>
+                <td class="auto-style4">
+                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Movie.aspx">TEST: Next Page</asp:HyperLink>
+                </td>
             </tr>
             <tr>
-                <td class="auto-style5">Movies in Theatre</td>
-                <td class="auto-style15">
-                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" Width="130px" />
-                </td>
-                <td class="auto-style6">
-                    <asp:TextBox ID="txtLinks" runat="server" Height="223px" TextMode="MultiLine" Width="561px"></asp:TextBox>
-                </td>
+                <td class="auto-style15" colspan="3">Movies in Theatre</td>
             </tr>
             </table>
         <table class="auto-style7">

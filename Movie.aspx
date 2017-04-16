@@ -121,7 +121,9 @@
             </td>
         </tr>
     </table>
-        <asp:Button ID="btnTest" runat="server" OnClick="btnTest_Click" Text="Test" />
+        <p>
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Theatre.aspx">TEST: Next Page</asp:HyperLink>
+        </p>
     </form>
 </body>
 </html>
