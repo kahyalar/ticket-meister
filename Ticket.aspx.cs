@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Ticket_Amount : System.Web.UI.Page
+public partial class Ticket : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {

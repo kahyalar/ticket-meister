@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Ticket Amount.aspx.cs" Inherits="Ticket_Amount" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TicketAmount.aspx.cs" Inherits="TicketAmount" %>
 
 <!DOCTYPE html>
 
