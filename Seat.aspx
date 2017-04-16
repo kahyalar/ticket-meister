@@ -7,10 +7,12 @@
     <title></title>
     <style type="text/css">
         .auto-style1 {
-            width: 30%;
+            width: 100%;
+            height: 147px;
         }
         .auto-style2 {
-            height: 23px;
+            height: 25px;
+            width: 376px;
         }
         .auto-style3 {
             width: 100%;
@@ -27,7 +29,33 @@
             height: 30px;
         }
         .auto-style11 {
-            margin-left: 0px;
+            height: 25px;
+            width: 300px;
+        }
+        .auto-style7 {
+            margin-left: 60px;
+        }
+        .auto-style14 {
+            width: 300px;
+            height: 24px;
+        }
+        .auto-style15 {
+            width: 376px;
+            height: 24px;
+        }
+        .auto-style16 {
+            margin-left: 40px;
+        }
+        .auto-style17 {
+            width: 340px;
+            height: 24px;
+        }
+        .auto-style18 {
+            height: 25px;
+            width: 340px;
+        }
+        .auto-style19 {
+            margin-left: 100px;
         }
     </style>
 </head>
@@ -35,36 +63,72 @@
     <form id="form1" runat="server">
         <table class="auto-style1">
             <tr>
-                <td>
+                <td class="auto-style14">
                     <asp:Label ID="lblTitle" runat="server" Font-Bold="True"></asp:Label>
                 </td>
+                <td class="auto-style17">
+                    &nbsp;</td>
+                <td class="auto-style15">
+                    &nbsp;</td>
             </tr>
             <tr>
-                <td>
+                <td class="auto-style14">
                     <asp:Label ID="lblDate" runat="server"></asp:Label>
                 </td>
+                <td class="auto-style17">
+                    &nbsp;</td>
+                <td class="auto-style15">
+                    &nbsp;</td>
             </tr>
             <tr>
-                <td>
+                <td class="auto-style14">
                     <asp:Label ID="lblCity" runat="server"></asp:Label>
                 </td>
+                <td class="auto-style17">
+                    &nbsp;</td>
+                <td class="auto-style15">
+                    &nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">
+                <td class="auto-style11">
                     <asp:Label ID="lblTheatre" runat="server"></asp:Label>
                 </td>
+                <td class="auto-style18">
+                    &nbsp;</td>
+                <td class="auto-style2">
+                    &nbsp;</td>
             </tr>
             <tr>
-                <td>
+                <td class="auto-style11">
                     <asp:Label ID="lblSession" runat="server"></asp:Label>
+                    <br />
                 </td>
+                <td class="auto-style18">
+                    &nbsp;</td>
+                <td class="auto-style2">
+                    &nbsp;</td>
             </tr>
             <tr>
-                <td>
+                <td class="auto-style11">
                     <asp:Label ID="Label1" runat="server" Text="Adult:" Width="50px"></asp:Label>
                     <asp:Label ID="lblAdultAmount" runat="server" Text="##" Width="60px"></asp:Label>
                     <asp:Label ID="Label2" runat="server" Text="Student:" Width="70px"></asp:Label>
                     <asp:Label ID="lblStudentAmount" runat="server" Text="##" Width="60px"></asp:Label>
+                </td>
+                <td class="auto-style18">
+                    &nbsp;</td>
+                <td class="auto-style2">
+                    <asp:Label ID="lblSeatsSelected" runat="server" CssClass="auto-style19" Text="0 out of ## Seats Selected" Width="200px"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style11">
+                    &nbsp;</td>
+                <td class="auto-style18">
+                    &nbsp;</td>
+                <td class="auto-style2">
+                    <asp:Button ID="btnBack" runat="server" CssClass="auto-style16" Text="Back" Width="120px" />
+                    <asp:Button ID="btnContinue" runat="server" CssClass="auto-style7" Text="Continue" Width="120px" />
                 </td>
             </tr>
         </table>
@@ -1422,8 +1486,9 @@
             </tr>
             </table>
         <br />
+        <asp:Label ID="TEST" runat="server" Text="TEST"></asp:Label>
         <br />
-        <asp:Label ID="lblTest" runat="server" Text="Label"></asp:Label>
+        <br />
     </form>
 </body>
 </html>
