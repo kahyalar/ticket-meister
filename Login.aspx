@@ -31,6 +31,9 @@
             height: 29px;
             width: 70px;
         }
+        .auto-style15 {
+            margin-left: 125px;
+        }
     </style>
 </head>
 <body style="width: 267px; height: 132px">
@@ -60,7 +63,7 @@
             </tr>
             <tr>
                 <td class="auto-style12" colspan="2">
-                    <asp:Button ID="btnLogin" runat="server" Text="Login" Width="120px" OnClick="btnLogin_Click" style="margin-left: 10px" />
+                    <asp:Button ID="btnLogin" runat="server" Text="Login" Width="120px" OnClick="btnLogin_Click" CssClass="auto-style15" />
                 </td>
             </tr>
         </table>

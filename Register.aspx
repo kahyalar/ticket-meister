@@ -7,13 +7,30 @@
     <title></title>
     <style type="text/css">
         .auto-style1 {
-            width: 58%;
+            width: 76%;
         }
         .auto-style2 {
-            width: 72px;
+            width: 134px;
         }
         .auto-style3 {
-            width: 176px;
+            width: 253px;
+        }
+        .auto-style4 {
+            margin-left: 25px;
+        }
+        .auto-style5 {
+            height: 41px;
+        }
+        .auto-style6 {
+            width: 134px;
+            height: 23px;
+        }
+        .auto-style7 {
+            width: 253px;
+            height: 23px;
+        }
+        .auto-style8 {
+            height: 23px;
         }
     </style>
 </head>
@@ -76,22 +93,45 @@
             <tr>
                 <td class="auto-style2">Email:</td>
                 <td class="auto-style3">
-                    <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtEmail" runat="server" Width="200px"></asp:TextBox>
                 </td>
                 <td>
                     <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtEmail" ErrorMessage="RegularExpressionValidator" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                 </td>
             </tr>
             <tr>
-                <td class="auto-style2">
-                    <asp:Button ID="btnBack" runat="server" Text="Back" />
-&nbsp; </td>
-                <td class="auto-style3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="btnClear" runat="server" style="margin-left: 0px" Text="Clear" />
-&nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" Width="49px" />
+                <td class="auto-style6">Credit Card Number:</td>
+                <td class="auto-style7">
+                    <asp:TextBox ID="txtCreditCard" runat="server" Width="200px"></asp:TextBox>
                 </td>
-                <td>&nbsp;</td>
+                <td class="auto-style8">
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtCreditCard" ErrorMessage="RegularExpressionValidator" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">Expiration Date:</td>
+                <td class="auto-style3">
+                    <asp:TextBox ID="txtExpDate" runat="server" Width="70px"></asp:TextBox>
+                </td>
+                <td>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="txtExpDate" ErrorMessage="RegularExpressionValidator" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">CVV:</td>
+                <td class="auto-style3">
+                    <asp:TextBox ID="txtCVV" runat="server" Width="75px"></asp:TextBox>
+                </td>
+                <td>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="txtCVV" ErrorMessage="RegularExpressionValidator" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style5" colspan="3">
+                    <asp:Button ID="btnBack" runat="server" Text="Back" Width="120px" />
+                    <asp:Button ID="btnClear" runat="server" Text="Clear" CssClass="auto-style4" Width="120px" />
+                    <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" Width="120px" CssClass="auto-style4" />
+                </td>
             </tr>
         </table>
     
