@@ -96,7 +96,10 @@ public partial class ManageMovies : System.Web.UI.Page
         string runtime = txtRuntime.Text;
         string storyline = txtStoryline.Text.Replace("'", "''");
         string poster_url = txtPosterURL.Text;
-        
+
+        if (poster_url.Contains("amazon") && poster_url.Contains("SY1000"))
+            poster_url = IMDB_LinkResizer(poster_url); // "._V1_SY1000_CR0,0,631,1000_AL_" => "._V1_SY300_CR0,0,200,300_AL_"
+
         OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Server.MapPath("HermitDB.mdb") + ";Persist Security Info=False");
         OleDbCommand cmd;
         string query;
@@ -166,5 +169,23 @@ public partial class ManageMovies : System.Web.UI.Page
         LoadListBox();
         Clear();
         lbMovies.SelectedIndex = 0;
+    }
+
+    string IMDB_LinkResizer(string url)
+    {
+        string body = url.Split('@')[0];
+        string extra = url.Split('@')[1]; // "._V1_SY1000_CR0,0,947,1000_AL_.jpg" => "._V1_SY300_CRy,0,x,300_AL_.jpg"
+        float x = Int32.Parse(extra.Split(',')[2]);
+
+        if (x * 0.3 < 200)
+            extra = "@._V1_SY300_CR0,0,200,300_AL_.jpg";
+        else
+        {
+            int a = (int)(x * 0.3);
+            int b = (a - 200) / 2;
+            extra = "@._V1_SY300_CR" + b + ",0,200,300_AL_.jpg";
+        }
+        
+        return body + extra;
     }
 }

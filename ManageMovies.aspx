@@ -45,7 +45,7 @@
                     <br />
                     UPDATE A MOVIE: Choose the movie you want to edit from the list box, change its values, then press &quot;Save&quot; button without choosing something else from the list box.<br />
                     <br />
-                    DELETE A MOVIE: Choose the movie you want to delete from the list box and just press &quot;Delete&quot; button.</td>
+                    DELETE A MOVIE: Choose the movie you want to delete from the list box and just press &quot;Delete&quot; button.&nbsp; </td>
             </tr>
             <tr>
                 <td>
@@ -61,7 +61,7 @@
                     <asp:Image ID="imgMovie" runat="server" Height="300px" ImageAlign="Middle" Width="200px" />
                 </td>
                 <td class="auto-style14">
-                    <asp:Label ID="Label7" runat="server" Font-Bold="True" Font-Size="Large" Text="Poster Location"></asp:Label>
+                    <asp:Label ID="Label7" runat="server" Font-Bold="True" Font-Size="Large" Text="Poster URL"></asp:Label>
                 </td>
                 <td>
                     <asp:TextBox ID="txtPosterURL" runat="server" Width="650px">~/movies/</asp:TextBox>

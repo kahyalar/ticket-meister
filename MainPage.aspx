@@ -7,11 +7,7 @@
     <title></title>
     <style type="text/css">
         .auto-style1 {
-            width: 67%;
-        }
-        .auto-style3 {
-            width: 135px;
-            height: 34px;
+            width: 99%;
         }
         .auto-style7 {
             width: 825px;
@@ -33,12 +29,20 @@
             height: 34px;
         }
         .auto-style18 {
-            width: 843px;
+            width: 341px;
             height: 34px;
+        }
+        .auto-style19 {
+            width: 184px;
+            height: 34px;
+        }
+        .auto-style20 {
+            height: 33px;
+            width: 150px;
         }
     </style>
 </head>
-<body>
+<body style="width: 827px; height: 2510px">
     <form id="form1" runat="server">
         <table class="auto-style1">
             <tr>
@@ -46,7 +50,7 @@
                     <asp:Label ID="lblWelcome" runat="server" Text="Welcome "></asp:Label>
                     <asp:Label ID="lblFullName" runat="server" Text=""></asp:Label>
                 </td>
-                <td class="auto-style3">
+                <td class="auto-style19">
                     <asp:HyperLink ID="hlAdmin" runat="server" Visible="False">Add Movie</asp:HyperLink>
                 </td>
                 <td class="auto-style17">
@@ -55,7 +59,7 @@
             </tr>
             <tr>
                 <td class="auto-style15" colspan="2">Movies in Theatre</td>
-                <td class="auto-style15">
+                <td class="auto-style20">
                     <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Movie.aspx">TEST: Next Page</asp:HyperLink>
                 </td>
             </tr>
@@ -63,55 +67,55 @@
         <table class="auto-style7">
             <tr>
                 <td class="auto-style12">
-                    <asp:ImageButton ID="ImageButton1" runat="server" Height="300px" ImageAlign="Middle" Width="200px" ImageUrl="~/movies/236019314.jpg" />
+                    <asp:ImageButton ID="ImageButton1" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
                 </td>
                 <td class="auto-style13">
-                    <asp:ImageButton ID="ImageButton2" runat="server" Height="300px" ImageAlign="Middle" Width="200px" ImageUrl="~/movies/ask_n-krall_g_-united-kingdom.jpg" />
+                    <asp:ImageButton ID="ImageButton2" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
                 </td>
                 <td class="auto-style13">
-                    <asp:ImageButton ID="ImageButton3" runat="server" Height="300px" ImageAlign="Middle" Width="200px" ImageUrl="~/movies/baraka-the-shack.jpg" />
+                    <asp:ImageButton ID="ImageButton3" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
                 </td>
                 <td class="auto-style13">
-                    <asp:ImageButton ID="ImageButton4" runat="server" Height="300px" ImageAlign="Middle" Width="200px" ImageUrl="~/movies/ghost-intheshell.jpg" />
+                    <asp:ImageButton ID="ImageButton4" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
                 </td>
             </tr>
             <tr>
                 <td class="auto-style12">
-                    <asp:ImageButton ID="ImageButton5" runat="server" Height="300px" ImageAlign="Middle" Width="200px" ImageUrl="~/movies/guzelcrk.jpg" />
+                    <asp:ImageButton ID="ImageButton5" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
                 </td>
                 <td class="auto-style13">
-                    <asp:ImageButton ID="ImageButton6" runat="server" Height="300px" ImageAlign="Middle" Width="200px" ImageUrl="~/movies/H_zl__ve_Ofkeli_8_-_TR_Afis.jpg" />
+                    <asp:ImageButton ID="ImageButton6" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
                 </td>
                 <td class="auto-style13">
-                    <asp:ImageButton ID="ImageButton7" runat="server" Height="300px" ImageAlign="Middle" Width="200px" ImageUrl="~/movies/Life_Hayat_Poster_y_.jpg" />
+                    <asp:ImageButton ID="ImageButton7" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
                 </td>
                 <td class="auto-style13">
-                    <asp:ImageButton ID="ImageButton8" runat="server" Height="300px" ImageAlign="Middle" Width="200px" ImageUrl="~/movies/logan.jpg" />
+                    <asp:ImageButton ID="ImageButton8" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
                 </td>
             </tr>
             <tr>
                 <td class="auto-style12">
-                    <asp:ImageButton ID="ImageButton9" runat="server" Height="300px" ImageAlign="Middle" Width="200px" ImageUrl="~/movies/nocturama_xlg.jpg" />
+                    <asp:ImageButton ID="ImageButton9" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
                 </td>
                 <td class="auto-style13">
-                    <asp:ImageButton ID="ImageButton10" runat="server" Height="300px" ImageAlign="Middle" Width="200px" ImageUrl="~/movies/otoban.jpg" />
+                    <asp:ImageButton ID="ImageButton10" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
                 </td>
                 <td class="auto-style13">
-                    <asp:ImageButton ID="ImageButton11" runat="server" Height="300px" ImageAlign="Middle" Width="200px" ImageUrl="~/movies/Otopsi_-_The_Autopsy_of_Jane_Doe.jpg" />
+                    <asp:ImageButton ID="ImageButton11" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
                 </td>
                 <td class="auto-style13">
-                    <asp:ImageButton ID="ImageButton12" runat="server" Height="300px" ImageAlign="Middle" Width="200px" ImageUrl="~/movies/Power_Rangers_Afis_Final.jpg" />
+                    <asp:ImageButton ID="ImageButton12" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
                 </td>
             </tr>
             <tr>
                 <td class="auto-style12">
-                    <asp:ImageButton ID="ImageButton13" runat="server" Height="300px" ImageAlign="Middle" Width="200px" ImageUrl="~/movies/Sirinler_Kayip_Koy_Afis_y.jpg" />
+                    <asp:ImageButton ID="ImageButton13" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
                 </td>
                 <td class="auto-style13">
-                    <asp:ImageButton ID="ImageButton14" runat="server" Height="300px" ImageAlign="Middle" Width="200px" ImageUrl="~/movies/umut-bahcesi-zookeepers-wife.jpg" />
+                    <asp:ImageButton ID="ImageButton14" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
                 </td>
                 <td class="auto-style13">
-                    <asp:ImageButton ID="ImageButton15" runat="server" Height="300px" ImageAlign="Middle" Width="200px" ImageUrl="~/movies/Yasamak_Guzel_Sey_AF_S_final2.jpg" />
+                    <asp:ImageButton ID="ImageButton15" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
                 </td>
                 <td class="auto-style13">
                     <asp:ImageButton ID="ImageButton16" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
