@@ -41,12 +41,17 @@
                     <asp:ListBox ID="lbMovies" runat="server" AutoPostBack="True" Height="215px" OnSelectedIndexChanged="lbMovies_SelectedIndexChanged" Width="200px"></asp:ListBox>
                 </td>
                 <td class="auto-style19">
-                    &nbsp;</td>
+                    ADD NEW MOVIE: Choose &quot;New Movie&quot; from list box, fill all fields and then press &quot;Save&quot; button.<br />
+                    <br />
+                    UPDATE A MOVIE: Choose the movie you want to edit from the list box, change its values, then press &quot;Save&quot; button without choosing something else from the list box.<br />
+                    <br />
+                    DELETE A MOVIE: Choose the movie you want to delete from the list box and just press &quot;Delete&quot; button.</td>
             </tr>
             <tr>
                 <td>
-                    <asp:Button ID="btnClear" runat="server" CssClass="auto-style18" Text="Clear" Width="120px" />
-                    <asp:Button ID="btnSave" runat="server" CssClass="auto-style17" Text="Save" Width="120px" />
+                    <asp:Button ID="btnClear" runat="server" CssClass="auto-style18" Text="Clear" Width="120px" OnClick="btnClear_Click" />
+                    <asp:Button ID="btnDelete" runat="server" CssClass="auto-style17" Text="Delete" Width="120px" OnClick="btnDelete_Click" />
+                    <asp:Button ID="btnSave" runat="server" CssClass="auto-style17" Text="Save" Width="120px" OnClick="btnSave_Click" />
                 </td>
             </tr>
         </table>
