@@ -51,130 +51,129 @@
                     <asp:Label ID="lblFullName" runat="server" Text=""></asp:Label>
                 </td>
                 <td class="auto-style19">
-                    <asp:HyperLink ID="hlAdmin" runat="server" Visible="False">Add Movie</asp:HyperLink>
+                    <asp:HyperLink ID="hlAdmin" runat="server" NavigateUrl="~/ManageMovies.aspx" Visible="False">Add Movie</asp:HyperLink>
                 </td>
                 <td class="auto-style17">
-                    <asp:HyperLink ID="HyperLink1" runat="server">My Tickets</asp:HyperLink>
+                    <asp:Button ID="btnMyTickets" runat="server" OnClick="btnMyTickets_Click" Text="My Tickets" />
                 </td>
             </tr>
             <tr>
                 <td class="auto-style15" colspan="2">Movies in Theatre</td>
                 <td class="auto-style20">
-                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Movie.aspx">TEST: Next Page</asp:HyperLink>
-                </td>
+                    &nbsp;</td>
             </tr>
             </table>
         <table class="auto-style7">
             <tr>
                 <td class="auto-style12">
-                    <asp:ImageButton ID="ImageButton1" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
+                    <asp:ImageButton ID="ImageButton1" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" OnClick="ImageButton_Click" />
                 </td>
                 <td class="auto-style13">
-                    <asp:ImageButton ID="ImageButton2" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
+                    <asp:ImageButton ID="ImageButton2" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" OnClick="ImageButton_Click" />
                 </td>
                 <td class="auto-style13">
-                    <asp:ImageButton ID="ImageButton3" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
+                    <asp:ImageButton ID="ImageButton3" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" OnClick="ImageButton_Click" />
                 </td>
                 <td class="auto-style13">
-                    <asp:ImageButton ID="ImageButton4" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
+                    <asp:ImageButton ID="ImageButton4" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" OnClick="ImageButton_Click" />
                 </td>
             </tr>
             <tr>
                 <td class="auto-style12">
-                    <asp:ImageButton ID="ImageButton5" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
+                    <asp:ImageButton ID="ImageButton5" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" OnClick="ImageButton_Click" />
                 </td>
                 <td class="auto-style13">
-                    <asp:ImageButton ID="ImageButton6" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
+                    <asp:ImageButton ID="ImageButton6" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" OnClick="ImageButton_Click" />
                 </td>
                 <td class="auto-style13">
-                    <asp:ImageButton ID="ImageButton7" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
+                    <asp:ImageButton ID="ImageButton7" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" OnClick="ImageButton_Click" />
                 </td>
                 <td class="auto-style13">
-                    <asp:ImageButton ID="ImageButton8" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
+                    <asp:ImageButton ID="ImageButton8" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" OnClick="ImageButton_Click" />
                 </td>
             </tr>
             <tr>
                 <td class="auto-style12">
-                    <asp:ImageButton ID="ImageButton9" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
+                    <asp:ImageButton ID="ImageButton9" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" OnClick="ImageButton_Click" />
                 </td>
                 <td class="auto-style13">
-                    <asp:ImageButton ID="ImageButton10" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
+                    <asp:ImageButton ID="ImageButton10" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" OnClick="ImageButton_Click" />
                 </td>
                 <td class="auto-style13">
-                    <asp:ImageButton ID="ImageButton11" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
+                    <asp:ImageButton ID="ImageButton11" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" OnClick="ImageButton_Click" />
                 </td>
                 <td class="auto-style13">
-                    <asp:ImageButton ID="ImageButton12" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
+                    <asp:ImageButton ID="ImageButton12" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" OnClick="ImageButton_Click" />
                 </td>
             </tr>
             <tr>
                 <td class="auto-style12">
-                    <asp:ImageButton ID="ImageButton13" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
+                    <asp:ImageButton ID="ImageButton13" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" OnClick="ImageButton_Click" />
                 </td>
                 <td class="auto-style13">
-                    <asp:ImageButton ID="ImageButton14" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
+                    <asp:ImageButton ID="ImageButton14" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" OnClick="ImageButton_Click" />
                 </td>
                 <td class="auto-style13">
-                    <asp:ImageButton ID="ImageButton15" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
+                    <asp:ImageButton ID="ImageButton15" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" OnClick="ImageButton_Click" />
                 </td>
                 <td class="auto-style13">
-                    <asp:ImageButton ID="ImageButton16" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
+                    <asp:ImageButton ID="ImageButton16" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" OnClick="ImageButton_Click" />
                 </td>
             </tr>
             <tr>
                 <td class="auto-style12">
-                    <asp:ImageButton ID="ImageButton17" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
+                    <asp:ImageButton ID="ImageButton17" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" OnClick="ImageButton_Click" />
                 </td>
                 <td class="auto-style13">
-                    <asp:ImageButton ID="ImageButton18" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
+                    <asp:ImageButton ID="ImageButton18" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" OnClick="ImageButton_Click" />
                 </td>
                 <td class="auto-style13">
-                    <asp:ImageButton ID="ImageButton19" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
+                    <asp:ImageButton ID="ImageButton19" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" OnClick="ImageButton_Click" />
                 </td>
                 <td class="auto-style13">
-                    <asp:ImageButton ID="ImageButton20" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
+                    <asp:ImageButton ID="ImageButton20" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" OnClick="ImageButton_Click" />
                 </td>
             </tr>
             <tr>
                 <td class="auto-style12">
-                    <asp:ImageButton ID="ImageButton21" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
+                    <asp:ImageButton ID="ImageButton21" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" OnClick="ImageButton_Click" />
                 </td>
                 <td class="auto-style13">
-                    <asp:ImageButton ID="ImageButton22" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
+                    <asp:ImageButton ID="ImageButton22" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" OnClick="ImageButton_Click" />
                 </td>
                 <td class="auto-style13">
-                    <asp:ImageButton ID="ImageButton23" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
+                    <asp:ImageButton ID="ImageButton23" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" OnClick="ImageButton_Click" />
                 </td>
                 <td class="auto-style13">
-                    <asp:ImageButton ID="ImageButton24" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
+                    <asp:ImageButton ID="ImageButton24" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" OnClick="ImageButton_Click" />
                 </td>
             </tr>
             <tr>
                 <td class="auto-style12">
-                    <asp:ImageButton ID="ImageButton25" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
+                    <asp:ImageButton ID="ImageButton25" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" OnClick="ImageButton_Click" />
                 </td>
                 <td class="auto-style13">
-                    <asp:ImageButton ID="ImageButton26" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
+                    <asp:ImageButton ID="ImageButton26" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" OnClick="ImageButton_Click" />
                 </td>
                 <td class="auto-style13">
-                    <asp:ImageButton ID="ImageButton27" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
+                    <asp:ImageButton ID="ImageButton27" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" OnClick="ImageButton_Click" />
                 </td>
                 <td class="auto-style13">
-                    <asp:ImageButton ID="ImageButton28" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
+                    <asp:ImageButton ID="ImageButton28" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" OnClick="ImageButton_Click" />
                 </td>
             </tr>
             <tr>
                 <td class="auto-style12">
-                    <asp:ImageButton ID="ImageButton29" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
+                    <asp:ImageButton ID="ImageButton29" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" OnClick="ImageButton_Click" />
                 </td>
                 <td class="auto-style13">
-                    <asp:ImageButton ID="ImageButton30" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
+                    <asp:ImageButton ID="ImageButton30" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" OnClick="ImageButton_Click" />
                 </td>
                 <td class="auto-style13">
-                    <asp:ImageButton ID="ImageButton31" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
+                    <asp:ImageButton ID="ImageButton31" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" OnClick="ImageButton_Click" />
                 </td>
                 <td class="auto-style13">
-                    <asp:ImageButton ID="ImageButton32" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" />
+                    <asp:ImageButton ID="ImageButton32" runat="server" Height="300px" ImageAlign="Middle" Width="200px" Visible="False" OnClick="ImageButton_Click" />
                 </td>
             </tr>
             </table>

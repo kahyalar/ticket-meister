@@ -94,14 +94,12 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <asp:Button ID="btnBack" runat="server" Text="Back" Width="120px" />
-                    <asp:Button ID="btnPurchase" runat="server" CssClass="auto-style5" Text="Purchase" Width="120px" />
+                    <asp:Button ID="btnPurchase" runat="server" CssClass="auto-style5" Text="Purchase" Width="198px" OnClick="btnPurchase_Click" />
                 </td>
             </tr>
         </table>
         <p>
-            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Ticket.aspx">TEST: Next Page</asp:HyperLink>
-        </p>
+            &nbsp;</p>
     </form>
 </body>
 </html>

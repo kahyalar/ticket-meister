@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Data.OleDb;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -7,39 +8,44 @@ using System.Web.UI.WebControls;
 
 public partial class Movie : System.Web.UI.Page
 {
-    string imageURL = "~/movies/236019314.jpg";
-    string title = "The Baby Boss";
-    string rating = "6.5";
-    string director = "Tom McGrath";
-    string stars = "Alec Baldwin<br/>Steve Buscemi<br/>Jimmy Kimmel";
-    string runtime = "97";
-    string storyline = "A new baby's arrival impacts a family, told from the point of view of a delightfully unreliable narrator -- a wildly imaginative 7-year-old named Tim. The most unusual Boss Baby (Alec Baldwin) arrives at Tim's home in a taxi, wearing a suit and carrying a briefcase. The instant sibling rivalry must soon be put aside when Tim discovers that Boss Baby is actually a spy on a secret mission, and only he can help thwart a dastardly plot that involves an epic battle between puppies and babies.";
-
-
+    string userId;
     protected void Page_Load(object sender, EventArgs e)
     {
-        imgMovie.ImageUrl = imageURL;
-        lblTitle.Text = title;
-        lblRating.Text = "IMDB: " + rating + "/10";
-        lblDirector.Text = director;
-        lblStars.Text = stars;
-        lblRuntime.Text = runtime + " min";
-        lblStoryline.Text = storyline;
+        userId = Request.QueryString["UID"];
+        int id = Int32.Parse(Request.QueryString["id"]);
+
+        LoadMovie(id);
     }
 
-    protected void btnTest_Click(object sender, EventArgs e)
+    void LoadMovie(int ID)
     {
-        LoadMovie(0);
+        OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Server.MapPath("HermitDB.mdb") + ";Persist Security Info=False");
+        string query = "select * from movies where ID = " + ID;
+        OleDbCommand cmd = new OleDbCommand(query, con);
+        con.Open();
+        OleDbDataReader rdr = cmd.ExecuteReader();
+
+        if (rdr.Read())
+        {
+            lblTitle.Text = rdr["movie_title"].ToString();
+            lblDirector.Text = rdr["movie_director"].ToString();
+            lblStars.Text = rdr["movie_stars"].ToString().Replace(",","<br/>");
+            lblRating.Text = "IMDB: " + rdr["movie_rating"] + "/10";
+            lblRuntime.Text = rdr["movie_runtime"].ToString() + " min";
+            lblStoryline.Text = rdr["movie_storyline"].ToString();
+            imgMovie.ImageUrl = rdr["movie_poster_url"].ToString();
+
+        }
+        con.Close();
     }
 
-    void LoadMovie(int movieID)
+    protected void btnBuy_Click(object sender, EventArgs e)
     {
-        imgMovie.ImageUrl = imageURL;
-        lblTitle.Text = title;
-        lblRating.Text = "IMDB: " + rating + "/10";
-        lblDirector.Text = director;
-        lblStars.Text = stars;
-        lblRuntime.Text = runtime + " min";
-        lblStoryline.Text = storyline;
+        Response.Redirect("Theatre.aspx?title=" + lblTitle.Text + "&UID=" + userId);
+    }
+
+    protected void btnBack_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("MainPage.aspx?");
     }
 }

@@ -9,11 +9,17 @@ using System.Web.UI.WebControls;
 public partial class Seat : System.Web.UI.Page
 {
     // TEST BLOCK
-    string title = "The Baby Boss";
-    string date = "26/04/2017";
-    string city = "Istanbul";
-    string theatre = "Istinye Park Shopping Mall";
-    string session = "19:00";
+    string title;
+    string date;
+    string city;
+    string theatre;
+    string session;
+    string totalPrice;
+    string student, adult;
+    string userId;
+
+    string seatName;
+
     // TEST BLOCK
 
     int totalAmount;
@@ -24,12 +30,24 @@ public partial class Seat : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
+        title = Request.QueryString["title"].ToString();
+        date = Request.QueryString["date"].ToString();
+        city = Request.QueryString["city"].ToString();
+        theatre = Request.QueryString["theatre"].ToString();
+        session = Request.QueryString["session"].ToString();
+        totalPrice = Request.QueryString["price"].ToString();
+        student = Request.QueryString["student"].ToString();
+        adult = Request.QueryString["adult"].ToString();
+        userId = Request.QueryString["UID"];
         // TEST BLOCK
         lblTitle.Text = title;
         lblCity.Text = city;
         lblTheatre.Text = theatre;
         lblDate.Text = date;
         lblSession.Text = session;
+        lblAdultAmount.Text = adult;
+        lblStudentAmount.Text = student;
+        selectedSeatsAmount = Convert.ToInt32(student) + Convert.ToInt32(adult);
         // TEST BLOCK
 
         if (Session["selectedButtonIDs"] == null)
@@ -42,8 +60,8 @@ public partial class Seat : System.Web.UI.Page
             selectedButtonIDs = (List<string>)Session["selectedButtonIDs"];
         }
 
-        int adultAmount = 2;
-        int studentAmount = 1;
+        int adultAmount = Convert.ToInt32(adult);
+        int studentAmount = Convert.ToInt32(student);
         totalAmount = adultAmount + studentAmount;
 
         lblAdultAmount.Text = adultAmount + "";
@@ -82,7 +100,7 @@ public partial class Seat : System.Web.UI.Page
             buttonRow--;
         }
 
-        string seatName = (char)(65 + buttonRow) + "" + buttonNo;
+        seatName = (char)(65 + buttonRow) + "" + buttonNo;
 
         if (pressedButton.BackColor == ColorTranslator.FromHtml("#CCCCCC"))
         {
@@ -141,5 +159,19 @@ public partial class Seat : System.Web.UI.Page
         {
             button.Enabled = enable;
         }
+    }
+
+    protected void btnContinue_Click(object sender, EventArgs e)
+    {
+        string seatNames = "";
+        selectedSeats.Sort();
+        for(int i = 0; i < selectedSeats.Count; i++)
+        {
+            if(i < selectedSeats.Count-1)
+                seatNames = seatNames + selectedSeats[i].ToString() + ",";
+            else
+                seatNames = seatNames + selectedSeats[i].ToString();
+        }
+        Response.Redirect("Purchase.aspx?price=" + totalPrice + "&student=" + student + "&adult=" + adult + "&title=" + title + "&date=" + date + "&city=" + city + "&theatre=" + theatre + "&session=" + session + "&seats="+ seatNames + "&UID=" + userId);
     }
 }

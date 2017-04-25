@@ -58,7 +58,7 @@
             </tr>
             <tr>
                 <td class="auto-style2" colspan="2">
-                    <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label>
+                    <asp:Label ID="lblMessage" runat="server" ForeColor="Red"></asp:Label>
                 </td>
             </tr>
             <tr>
@@ -67,8 +67,6 @@
                 </td>
             </tr>
         </table>
-    
-        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/MainPage.aspx">TEST: Next Page</asp:HyperLink>
     
     </form>
 </body>

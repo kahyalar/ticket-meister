@@ -77,7 +77,7 @@
             </tr>
             <tr>
                 <td class="auto-style14">
-                    <asp:Label ID="Label5" runat="server" Font-Bold="True" Font-Size="Large" Text="IMDB Link"></asp:Label>
+                    <asp:Label ID="Label5" runat="server" Font-Bold="True" Font-Size="Large" Text="IMDB Rating"></asp:Label>
                 </td>
                 <td>
                     <asp:TextBox ID="txtIMDB" runat="server" Width="650px"></asp:TextBox>

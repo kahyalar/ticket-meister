@@ -59,13 +59,12 @@
             <tr>
                 <td>
                     <asp:Button ID="btnBack" runat="server" Text="Back" Width="120px" />
-                    <asp:Button ID="btnBack0" runat="server" CssClass="auto-style2" Text="Continue" Width="120px" />
+                    <asp:Button ID="btnBack0" runat="server" CssClass="auto-style2" Text="Continue" Width="120px" OnClick="btnBack0_Click" />
                 </td>
             </tr>
         </table>
         <p>
-            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/TicketAmount.aspx">TEST: Next Page</asp:HyperLink>
-        </p>
+            &nbsp;</p>
     </form>
 </body>
 </html>

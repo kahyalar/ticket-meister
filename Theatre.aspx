@@ -33,7 +33,7 @@
             </tr>
             <tr>
                 <td>
-                    <asp:DropDownList ID="ddlDate" runat="server">
+                    <asp:DropDownList ID="ddlDate" runat="server" Width="150px">
                         <asp:ListItem>Choose a Day</asp:ListItem>
                     </asp:DropDownList>
                     <br />
@@ -46,7 +46,7 @@
             </tr>
             <tr>
                 <td>
-                    <asp:DropDownList ID="ddlCity" runat="server">
+                    <asp:DropDownList ID="ddlCity" runat="server" Width="150px" AutoPostBack="True" OnSelectedIndexChanged="ddlCity_SelectedIndexChanged">
                         <asp:ListItem>Choose a City</asp:ListItem>
                     </asp:DropDownList>
                     <br />
@@ -54,7 +54,7 @@
             </tr>
             <tr>
                 <td>
-                    <asp:DropDownList ID="DropDownList3" runat="server">
+                    <asp:DropDownList ID="ddlTheatre" runat="server" Width="150px">
                         <asp:ListItem>Choose a Theatre</asp:ListItem>
                     </asp:DropDownList>
                     <br />
@@ -63,13 +63,12 @@
             <tr>
                 <td>
                     <asp:Button ID="btnBack" runat="server" Text="Back" Width="120px" />
-                    <asp:Button ID="btnContinue" runat="server" CssClass="auto-style2" Text="Continue" Width="120px" />
+                    <asp:Button ID="btnContinue" runat="server" CssClass="auto-style2" Text="Continue" Width="120px" OnClick="btnContinue_Click" />
                 </td>
             </tr>
         </table>
         <p>
-            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Session.aspx">TEST: Next Page</asp:HyperLink>
-        </p>
+            &nbsp;</p>
     </form>
 </body>
 </html>

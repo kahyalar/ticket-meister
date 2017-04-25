@@ -16,6 +16,9 @@
         <p style="width: 106px">
             <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Register.aspx">Register</asp:HyperLink>
         </p>
+        <p style="width: 106px">
+            <asp:Label ID="lblInfo" runat="server" ForeColor="Lime"></asp:Label>
+        </p>
     </form>
 </body>
 </html>

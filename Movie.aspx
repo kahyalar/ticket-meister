@@ -12,7 +12,7 @@
         }
         .auto-style3 {
             width: 200px;
-            height: 64px;
+            height: 40px;
         }
         .auto-style4 {
             width: 302px;
@@ -21,13 +21,9 @@
             width: 200px;
             height: 27px;
         }
-        .auto-style6 {
-            height: 27px;
-            width: 302px;
-        }
         .auto-style7 {
             width: 200px;
-            height: 325px;
+            height: 291px;
         }
         .auto-style13 {
             margin-left: 20px;
@@ -55,14 +51,29 @@
             width: 200px;
             height: 28px;
         }
+        .auto-style34 {
+            width: 597px;
+        }
+        .auto-style35 {
+            width: 200px;
+            height: 30px;
+        }
+        .auto-style36 {
+            height: 30px;
+            width: 302px;
+        }
+        .auto-style37 {
+            width: 200px;
+            height: 16px;
+        }
     </style>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" class="auto-style34">
     <table class="auto-style1">
         <tr>
-            <td class="auto-style5"></td>
-            <td class="auto-style6">
+            <td class="auto-style35"></td>
+            <td class="auto-style36">
                 <asp:Label ID="lblTitle" runat="server" CssClass="auto-style16" Font-Bold="True" Font-Size="X-Large"></asp:Label>
             </td>
         </tr>
@@ -105,7 +116,7 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style33">
+            <td class="auto-style37">
                 <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Size="Large" Text="Runtime"></asp:Label>
             </td>
         </tr>
@@ -116,14 +127,13 @@
                 <br />
             </td>
             <td class="auto-style32">
-                <asp:Button ID="btnBack" runat="server" CssClass="auto-style15" Height="30px" Text="Back" Width="100px" />
-                <asp:Button ID="btnBuy" runat="server" CssClass="auto-style14" Height="30px" Text="Buy Ticket" Width="100px" />
+                <asp:Button ID="btnBack" runat="server" CssClass="auto-style15" Height="30px" Text="Back" Width="100px" OnClick="btnBack_Click" />
+                <asp:Button ID="btnBuy" runat="server" CssClass="auto-style14" Height="30px" Text="Buy Ticket" Width="100px" OnClick="btnBuy_Click" />
             </td>
         </tr>
     </table>
         <p>
-            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Theatre.aspx">TEST: Next Page</asp:HyperLink>
-        </p>
+            &nbsp;</p>
     </form>
 </body>
 </html>

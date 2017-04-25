@@ -93,7 +93,7 @@
             </tr>
         </table>
         <p>
-            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Welcome.aspx">TEST: Next Page</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/MainPage.aspx">Return to Home</asp:HyperLink>
         </p>
     </form>
 </body>

@@ -7,10 +7,10 @@
     <title></title>
     <style type="text/css">
         .auto-style1 {
-            width: 76%;
+            width: 99%;
         }
         .auto-style2 {
-            width: 134px;
+            width: 147px;
         }
         .auto-style3 {
             width: 253px;
@@ -22,7 +22,7 @@
             height: 41px;
         }
         .auto-style6 {
-            width: 134px;
+            width: 147px;
             height: 23px;
         }
         .auto-style7 {
@@ -31,6 +31,15 @@
         }
         .auto-style8 {
             height: 23px;
+        }
+        .auto-style10 {
+            margin-left: 0px;
+        }
+        .auto-style11 {
+            margin-right: 0px;
+        }
+        .auto-style12 {
+            margin-left: 3px;
         }
     </style>
 </head>
@@ -80,11 +89,10 @@
                 <td class="auto-style3">
                     <asp:DropDownList ID="ddlCity" runat="server">
                         <asp:ListItem>Select a city..</asp:ListItem>
-                        <asp:ListItem>İstanbul</asp:ListItem>
-                        <asp:ListItem>Eskişehir</asp:ListItem>
-                        <asp:ListItem>İzmir</asp:ListItem>
+                        <asp:ListItem>Istanbul</asp:ListItem>
+                        <asp:ListItem>Eskisehir</asp:ListItem>
+                        <asp:ListItem>Izmir</asp:ListItem>
                         <asp:ListItem>Ankara</asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
                     </asp:DropDownList>
                 </td>
                 <td>
@@ -102,34 +110,36 @@
             <tr>
                 <td class="auto-style6">Credit Card Number:</td>
                 <td class="auto-style7">
-                    <asp:TextBox ID="txtCreditCard" runat="server" Width="200px"></asp:TextBox>
+                    <asp:TextBox ID="txtCreditCard" runat="server" Width="200px" placeholder="Please write 16-digit card number"></asp:TextBox>
                 </td>
                 <td class="auto-style8">
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtCreditCard" ErrorMessage="RegularExpressionValidator" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtCreditCard" ErrorMessage="RegularExpressionValidator" ValidationExpression="^[0-9]{16}$"></asp:RegularExpressionValidator>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style2">Expiration Date:</td>
                 <td class="auto-style3">
-                    <asp:TextBox ID="txtExpDate" runat="server" Width="70px"></asp:TextBox>
+                    <asp:TextBox ID="txtExpDateMonth" runat="server" Width="20px" placeholder="MM" CssClass="auto-style11"></asp:TextBox>
+                    <asp:Label ID="Label1" runat="server" CssClass="auto-style12" Font-Size="Large" Text="/" Width="10px"></asp:Label>
+                    <asp:TextBox ID="txtExpDateYear" runat="server" Width="20px" placeholder="YY" CssClass="auto-style10"></asp:TextBox>
                 </td>
                 <td>
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="txtExpDate" ErrorMessage="RegularExpressionValidator" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="txtExpDateMonth" ErrorMessage="RegularExpressionValidator" ValidationExpression="^([0]{1}[1-9]{1}|[1]{1}[0-2]{1})$"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ControlToValidate="txtExpDateYear" ErrorMessage="RegularExpressionValidator" ValidationExpression="^([1]{1}[7-9]{1}|[2]{1}[0-9]{1})$"></asp:RegularExpressionValidator>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style2">CVV:</td>
                 <td class="auto-style3">
-                    <asp:TextBox ID="txtCVV" runat="server" Width="75px"></asp:TextBox>
+                    <asp:TextBox ID="txtCVV" runat="server" Width="35px" placeholder="XXX"></asp:TextBox>
                 </td>
                 <td>
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="txtCVV" ErrorMessage="RegularExpressionValidator" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="txtCVV" ErrorMessage="RegularExpressionValidator" ValidationExpression="^[0-9]{3}$"></asp:RegularExpressionValidator>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style5" colspan="3">
                     <asp:Button ID="btnBack" runat="server" Text="Back" Width="120px" />
-                    <asp:Button ID="btnClear" runat="server" Text="Clear" CssClass="auto-style4" Width="120px" />
                     <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" Width="120px" CssClass="auto-style4" />
                 </td>
             </tr>
@@ -137,8 +147,7 @@
     
     </div>
         <p>
-            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Welcome.aspx">TEST: Next Page</asp:HyperLink>
-        </p>
+            &nbsp;</p>
     </form>
 </body>
 </html>

@@ -10,7 +10,7 @@
             width: 30%;
         }
         .auto-style2 {
-            margin-left: 40px;
+            margin-left: 1px;
         }
         .auto-style3 {
             margin-left: 15px;
@@ -65,9 +65,9 @@
                 <td class="auto-style9">
                     <asp:Label ID="Label7" runat="server" Text="Adult" Width="100px"></asp:Label>
                     <asp:Label ID="Label8" runat="server" Text="$12" Width="50px"></asp:Label>
-                    <asp:Button ID="Button1" runat="server" Font-Bold="True" Font-Size="Large" Height="25px" Text="-" Width="25px" />
-                    <asp:Label ID="lblAdultAmount" runat="server" CssClass="auto-style3" Text="0" Width="30px"></asp:Label>
-                    <asp:Button ID="Button6" runat="server" Font-Bold="False" Font-Size="Large" Height="25px" Text="+" Width="25px" />
+                    <asp:Button ID="btnAdultDec" runat="server" Font-Bold="True" Font-Size="Large" Height="25px" Text="-" Width="25px" Enabled="False" OnClick="btnAdultDec_Click" />
+                    <asp:Label ID="lblAdultAmount" runat="server" CssClass="auto-style3" Width="30px">0</asp:Label>
+                    <asp:Button ID="btnAdultInc" runat="server" Font-Bold="False" Font-Size="Large" Height="25px" Text="+" Width="25px" OnClick="btnAdultInc_Click" />
                     <asp:Label ID="lblAdultTotalPrice" runat="server" CssClass="auto-style4" Text="$0" Width="50px"></asp:Label>
                 </td>
             </tr>
@@ -75,29 +75,26 @@
                 <td class="auto-style9">
                     <asp:Label ID="Label11" runat="server" Text="Student" Width="100px"></asp:Label>
                     <asp:Label ID="Label12" runat="server" Text="$8" Width="50px"></asp:Label>
-                    <asp:Button ID="Button5" runat="server" Font-Bold="True" Font-Size="Large" Height="25px" Text="-" Width="25px" />
+                    <asp:Button ID="btnStudentDec" runat="server" Font-Bold="True" Font-Size="Large" Height="25px" Text="-" Width="25px" Enabled="False" OnClick="btnStudentDec_Click" />
                     <asp:Label ID="lblStudentAmount" runat="server" CssClass="auto-style3" Text="0" Width="30px"></asp:Label>
-                    <asp:Button ID="Button7" runat="server" Font-Bold="False" Font-Size="Large" Height="25px" Text="+" Width="25px" />
+                    <asp:Button ID="btnStudentInc" runat="server" Font-Bold="False" Font-Size="Large" Height="25px" Text="+" Width="25px" OnClick="btnStudentInc_Click" />
                     <asp:Label ID="lblStudentTotalPrice" runat="server" CssClass="auto-style4" Text="$0" Width="50px"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style9">
                     <asp:Label ID="Label15" runat="server" Text="TOTAL" Width="281px"></asp:Label>
-                    <asp:Label ID="Label16" runat="server" CssClass="auto-style7" Text="$0" Width="50px"></asp:Label>
+                    <asp:Label ID="lblTotalPrice" runat="server" CssClass="auto-style7" Text="$0" Width="50px"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <br />
-                    <asp:Button ID="btnBack" runat="server" Text="Back" Width="120px" />
-                    <asp:Button ID="btnContinue" runat="server" CssClass="auto-style2" Text="Continue" Width="120px" />
+                    <asp:Button ID="btnContinue" runat="server" CssClass="auto-style2" Text="Continue" Width="120px" OnClick="btnContinue_Click" />
                 </td>
             </tr>
         </table>
         <p>
-            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Seat.aspx">TEST: Next Page</asp:HyperLink>
-        </p>
+            &nbsp;</p>
     </form>
 </body>
 </html>

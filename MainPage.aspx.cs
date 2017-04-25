@@ -8,9 +8,13 @@ using System.Web.UI.WebControls;
 
 public partial class MainPage : System.Web.UI.Page
 {
+    string userId;
     protected void Page_Load(object sender, EventArgs e)
     {
+        lblFullName.Text = Request.QueryString["fullname"];
+        userId = Request.QueryString["ID"];
         List<string> urls = new List<string>();
+        List<string> ids = new List<string>();
 
         OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Server.MapPath("HermitDB.mdb") + ";Persist Security Info=False");
         string query = "select * from movies";
@@ -21,6 +25,7 @@ public partial class MainPage : System.Web.UI.Page
         while (rdr.Read())
         {
             urls.Add(rdr["movie_poster_url"].ToString());
+            ids.Add(rdr["ID"].ToString());
 
         }
         con.Close();
@@ -33,7 +38,19 @@ public partial class MainPage : System.Web.UI.Page
                 continue;
             current.ImageUrl = urls[i];
             current.Visible = true;
+            current.AlternateText = ids[i];
         }
     }
 
+
+    protected void ImageButton_Click(object sender, ImageClickEventArgs e)
+    {
+        string id = ((ImageButton)sender).AlternateText;
+        Response.Redirect("Movie.aspx?id=" + id + "&UID=" + userId);
+    }
+
+    protected void btnMyTickets_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("MyTickets.aspx?UID=" + userId);
+    }
 }

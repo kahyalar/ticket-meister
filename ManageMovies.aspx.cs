@@ -72,7 +72,7 @@ public partial class ManageMovies : System.Web.UI.Page
         if (rdr.Read())
         {
             txtTitle.Text = rdr["movie_title"].ToString();
-            txtIMDB.Text = rdr["movie_imdb_link"].ToString();
+            txtIMDB.Text = rdr["movie_rating"].ToString();
             txtDirector.Text = rdr["movie_director"].ToString();
             txtStars.Text = rdr["movie_stars"].ToString();
             txtRuntime.Text = rdr["movie_runtime"].ToString();
@@ -90,7 +90,7 @@ public partial class ManageMovies : System.Web.UI.Page
             return;
         
         string title = txtTitle.Text.Replace("'", "''");
-        string imdb_link = txtIMDB.Text;
+        string rating = txtIMDB.Text;
         string director = txtDirector.Text.Replace("'", "''");
         string stars = txtStars.Text.Replace("'", "''");
         string runtime = txtRuntime.Text;
@@ -111,7 +111,7 @@ public partial class ManageMovies : System.Web.UI.Page
 
             query = "UPDATE movies SET" + 
                 " movie_title = '" + title + "'," + 
-                " movie_imdb_link = '" + imdb_link + "'," +
+                " movie_rating = '" + rating + "'," +
                 " movie_director = '" + director + "'," +
                 " movie_stars = '" + stars + "'," +
                 " movie_runtime = '" + runtime + "'," +
@@ -122,11 +122,10 @@ public partial class ManageMovies : System.Web.UI.Page
         }
         else
         {
-            query = "insert into movies (movie_title,movie_imdb_link,movie_rating,movie_director,movie_stars,movie_runtime,movie_poster_url,movie_storyline) values (@title,@imdb_link,@rating,@director,@stars,@runtime,@poster_url,@storyline)";
+            query = "insert into movies (movie_title,movie_rating,movie_director,movie_stars,movie_runtime,movie_poster_url,movie_storyline) values (@title,@rating,@director,@stars,@runtime,@poster_url,@storyline)";
             cmd = new OleDbCommand(query, con);
             cmd.Parameters.AddWithValue("@title", title);
-            cmd.Parameters.AddWithValue("@imdb_link", imdb_link);
-            cmd.Parameters.AddWithValue("@rating", "");
+            cmd.Parameters.AddWithValue("@rating", rating);
             cmd.Parameters.AddWithValue("@director", director);
             cmd.Parameters.AddWithValue("@stars", stars);
             cmd.Parameters.AddWithValue("@runtime", runtime);

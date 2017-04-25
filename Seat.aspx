@@ -33,7 +33,7 @@
             width: 300px;
         }
         .auto-style7 {
-            margin-left: 60px;
+            margin-left: 294px;
         }
         .auto-style14 {
             width: 300px;
@@ -42,9 +42,6 @@
         .auto-style15 {
             width: 376px;
             height: 24px;
-        }
-        .auto-style16 {
-            margin-left: 40px;
         }
         .auto-style17 {
             width: 340px;
@@ -123,13 +120,11 @@
             </tr>
             <tr>
                 <td class="auto-style11">
-                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Purchase.aspx">TEST: Next Page</asp:HyperLink>
-                </td>
+                    &nbsp;</td>
                 <td class="auto-style18">
                     &nbsp;</td>
                 <td class="auto-style2">
-                    <asp:Button ID="btnBack" runat="server" CssClass="auto-style16" Text="Back" Width="120px" />
-                    <asp:Button ID="btnContinue" runat="server" CssClass="auto-style7" Text="Continue" Width="120px" Enabled="False" />
+                    <asp:Button ID="btnContinue" runat="server" CssClass="auto-style7" Text="Continue" Width="120px" Enabled="False" OnClick="btnContinue_Click" />
                 </td>
             </tr>
         </table>
