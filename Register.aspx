@@ -15,9 +15,6 @@
         .auto-style3 {
             width: 253px;
         }
-        .auto-style4 {
-            margin-left: 25px;
-        }
         .auto-style5 {
             height: 41px;
         }
@@ -139,8 +136,7 @@
             </tr>
             <tr>
                 <td class="auto-style5" colspan="3">
-                    <asp:Button ID="btnBack" runat="server" Text="Back" Width="120px" />
-                    <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" Width="120px" CssClass="auto-style4" />
+                    <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" Width="120px" CssClass="auto-style10" />
                 </td>
             </tr>
         </table>

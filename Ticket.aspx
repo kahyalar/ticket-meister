@@ -28,7 +28,7 @@
         .barcode-font{
             font-family:'BarcodeFont';
         }
-    </style>
+        </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -93,7 +93,7 @@
             </tr>
         </table>
         <p>
-            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/MainPage.aspx">Return to Home</asp:HyperLink>
+            <asp:Button ID="btnReturnHome" runat="server" OnClick="btnReturnHome_Click" Text="Home Page" Width="120px" CssClass="auto-style2" />
         </p>
     </form>
 </body>

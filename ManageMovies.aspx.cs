@@ -8,9 +8,14 @@ using System.Web.UI.WebControls;
 
 public partial class ManageMovies : System.Web.UI.Page
 {
+    string userId, fullname;
+
     protected void Page_Load(object sender, EventArgs e)
     {
-        if(lbMovies.Items.Count == 0)
+        userId = Request.QueryString["UID"];
+        fullname = GetFullName(userId);
+
+        if (lbMovies.Items.Count == 0)
         {
             LoadListBox();
             lbMovies.SelectedIndex = 0;
@@ -186,5 +191,25 @@ public partial class ManageMovies : System.Web.UI.Page
         }
         
         return body + extra;
+    }
+
+    string GetFullName(string userId)
+    {
+        string _fullname;
+        OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Server.MapPath("HermitDB.mdb") + ";Persist Security Info=False");
+        string query = "select * from users where ID = " + userId;
+        OleDbCommand cmd = new OleDbCommand(query, con);
+        con.Open();
+        OleDbDataReader rdr = cmd.ExecuteReader();
+        rdr.Read();
+        _fullname = rdr["user_name"].ToString() + " " + rdr["user_surname"].ToString();
+        con.Close();
+
+        return _fullname;
+    }
+
+    protected void btnReturnHome_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("MainPage.aspx?ID=" + userId + "&fullname=" + fullname);
     }
 }

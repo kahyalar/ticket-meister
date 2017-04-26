@@ -11,8 +11,15 @@ public partial class MainPage : System.Web.UI.Page
     string userId;
     protected void Page_Load(object sender, EventArgs e)
     {
+        Session.RemoveAll();
         lblFullName.Text = Request.QueryString["fullname"];
         userId = Request.QueryString["ID"];
+
+        if (lblFullName.Text.Contains("BOSS"))
+        {
+            btnManage.Visible = true;
+        }
+
         List<string> urls = new List<string>();
         List<string> ids = new List<string>();
 
@@ -52,5 +59,15 @@ public partial class MainPage : System.Web.UI.Page
     protected void btnMyTickets_Click(object sender, EventArgs e)
     {
         Response.Redirect("MyTickets.aspx?UID=" + userId);
+    }
+
+    protected void btnLogout_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Welcome.aspx");
+    }
+
+    protected void btnManage_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("ManageMovies.aspx?UID=" + userId);
     }
 }

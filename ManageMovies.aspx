@@ -31,6 +31,9 @@
             width: 100%;
             height: 300px;
         }
+        .auto-style21 {
+            margin-left: 200px;
+        }
     </style>
 </head>
 <body style="width: 1069px; height: 580px">
@@ -52,6 +55,7 @@
                     <asp:Button ID="btnClear" runat="server" CssClass="auto-style18" Text="Clear" Width="120px" OnClick="btnClear_Click" />
                     <asp:Button ID="btnDelete" runat="server" CssClass="auto-style17" Text="Delete" Width="120px" OnClick="btnDelete_Click" />
                     <asp:Button ID="btnSave" runat="server" CssClass="auto-style17" Text="Save" Width="120px" OnClick="btnSave_Click" />
+                    <asp:Button ID="btnReturnHome" runat="server" CssClass="auto-style21" Text="Home Page" Width="120px" OnClick="btnReturnHome_Click" />
                 </td>
             </tr>
         </table>

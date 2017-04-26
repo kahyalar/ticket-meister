@@ -34,7 +34,7 @@ public partial class TicketAmount : System.Web.UI.Page
             lblAdultAmount.Text = adultAmount.ToString();
             adultPrice = 0;
             Session["adultPrice"] = adultPrice;
-            lblAdultTotalPrice.Text = dolarSign+adultPrice;
+            lblAdultTotalPrice.Text = dolarSign + adultPrice;
         }
         else
         {
@@ -103,7 +103,7 @@ public partial class TicketAmount : System.Web.UI.Page
 
     protected void btnAdultDec_Click(object sender, EventArgs e)
     {
-        if(lblAdultAmount.Text != "0")
+        if (lblAdultAmount.Text != "0")
         {
             adultAmount--;
             lblAdultAmount.Text = adultAmount.ToString();
@@ -119,7 +119,7 @@ public partial class TicketAmount : System.Web.UI.Page
 
     protected void btnStudentDec_Click(object sender, EventArgs e)
     {
-        if(lblStudentAmount.Text != "0")
+        if (lblStudentAmount.Text != "0")
         {
             studentAmount--;
             lblStudentAmount.Text = studentAmount.ToString();
@@ -149,9 +149,12 @@ public partial class TicketAmount : System.Web.UI.Page
 
     protected void btnContinue_Click(object sender, EventArgs e)
     {
-        string totalPrice = lblTotalPrice.Text.Remove(0,1);
+        string totalPrice = lblTotalPrice.Text.Remove(0, 1);
         string student = lblStudentAmount.Text;
         string adult = lblAdultAmount.Text;
-        Response.Redirect("Seat.aspx?price=" + totalPrice +"&student="+student+"&adult="+adult+ "&title=" + title + "&date=" + date + "&city=" + city + "&theatre=" + theatre + "&session="+ session + "&UID=" + userId);
+        int total = Int32.Parse(lblAdultAmount.Text) + Int32.Parse(lblStudentAmount.Text);
+
+        if (total > 0)
+            Response.Redirect("Seat.aspx?price=" + totalPrice + "&student=" + student + "&adult=" + adult + "&title=" + title + "&date=" + date + "&city=" + city + "&theatre=" + theatre + "&session=" + session + "&UID=" + userId);
     }
 }

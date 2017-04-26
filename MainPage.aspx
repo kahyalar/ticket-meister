@@ -24,21 +24,22 @@
         .auto-style15 {
             height: 33px;
         }
-        .auto-style17 {
-            width: 150px;
-            height: 34px;
-        }
         .auto-style18 {
             width: 341px;
             height: 34px;
         }
         .auto-style19 {
-            width: 184px;
             height: 34px;
         }
         .auto-style20 {
             height: 33px;
             width: 150px;
+        }
+        .auto-style21 {
+            margin-left: 0px;
+        }
+        .auto-style22 {
+            margin-left: 154px;
         }
     </style>
 </head>
@@ -51,16 +52,17 @@
                     <asp:Label ID="lblFullName" runat="server" Text=""></asp:Label>
                 </td>
                 <td class="auto-style19">
-                    <asp:HyperLink ID="hlAdmin" runat="server" NavigateUrl="~/ManageMovies.aspx" Visible="False">Add Movie</asp:HyperLink>
+                    <asp:Button ID="btnManage" runat="server" OnClick="btnManage_Click" Text="Manage Movies" Visible="False" Width="120px" CssClass="auto-style22" />
                 </td>
-                <td class="auto-style17">
-                    <asp:Button ID="btnMyTickets" runat="server" OnClick="btnMyTickets_Click" Text="My Tickets" />
+                <td class="auto-style19">
+                    <asp:Button ID="btnLogout" runat="server" OnClick="btnLogout_Click" Text="Log Out" CssClass="auto-style21" Width="120px" />
                 </td>
             </tr>
             <tr>
                 <td class="auto-style15" colspan="2">Movies in Theatre</td>
                 <td class="auto-style20">
-                    &nbsp;</td>
+                    <asp:Button ID="btnMyTickets" runat="server" OnClick="btnMyTickets_Click" Text="My Tickets" Width="120px" />
+                </td>
             </tr>
             </table>
         <table class="auto-style7">

@@ -10,7 +10,7 @@
             width: 24%;
         }
         .auto-style2 {
-            margin-left: 40px;
+            margin-left: 0px;
         }
         .auto-style3 {
             height: 23px;
@@ -62,7 +62,7 @@
             </tr>
             <tr>
                 <td>
-                    <asp:Button ID="btnBack" runat="server" Text="Back" Width="120px" />
+                    <br />
                     <asp:Button ID="btnContinue" runat="server" CssClass="auto-style2" Text="Continue" Width="120px" OnClick="btnContinue_Click" />
                 </td>
             </tr>

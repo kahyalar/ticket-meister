@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 public partial class Session : System.Web.UI.Page
 {
     string title;
-    string date; 
+    string date;
     string city;
     string theatre;
     string userId;
@@ -27,6 +27,7 @@ public partial class Session : System.Web.UI.Page
 
     protected void btnBack0_Click(object sender, EventArgs e)
     {
-        Response.Redirect("TicketAmount.aspx?session="+RadioButtonList1.SelectedItem.Text+"&title="+title+"&date="+date+"&city="+city+"&theatre="+ theatre + "&UID=" + userId);
+        if (RadioButtonList1.SelectedIndex >= 0)
+            Response.Redirect("TicketAmount.aspx?session=" + RadioButtonList1.SelectedItem.Text + "&title=" + title + "&date=" + date + "&city=" + city + "&theatre=" + theatre + "&UID=" + userId);
     }
 }

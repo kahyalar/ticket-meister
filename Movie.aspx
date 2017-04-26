@@ -31,10 +31,7 @@
             margin-bottom: 0px;
         }
         .auto-style14 {
-            margin-left: 100px;
-        }
-        .auto-style15 {
-            margin-left: 0px;
+            margin-left: 266px;
         }
         .auto-style16 {
             margin-left: 20px;
@@ -127,7 +124,6 @@
                 <br />
             </td>
             <td class="auto-style32">
-                <asp:Button ID="btnBack" runat="server" CssClass="auto-style15" Height="30px" Text="Back" Width="100px" OnClick="btnBack_Click" />
                 <asp:Button ID="btnBuy" runat="server" CssClass="auto-style14" Height="30px" Text="Buy Ticket" Width="100px" OnClick="btnBuy_Click" />
             </td>
         </tr>

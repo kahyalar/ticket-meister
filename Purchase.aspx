@@ -19,7 +19,7 @@
             margin-left: 10px;
         }
         .auto-style5 {
-            margin-left: 100px;
+            margin-left: 290px;
         }
     </style>
 </head>
@@ -94,7 +94,7 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <asp:Button ID="btnPurchase" runat="server" CssClass="auto-style5" Text="Purchase" Width="198px" OnClick="btnPurchase_Click" />
+                    <asp:Button ID="btnPurchase" runat="server" CssClass="auto-style5" Text="Purchase" Width="120px" OnClick="btnPurchase_Click" />
                 </td>
             </tr>
         </table>

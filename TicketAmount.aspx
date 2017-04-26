@@ -10,7 +10,7 @@
             width: 30%;
         }
         .auto-style2 {
-            margin-left: 1px;
+            margin-left: 220px;
         }
         .auto-style3 {
             margin-left: 15px;
